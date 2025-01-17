@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игры</title>
+</head>
+<body>
+    <h1>Игры</h1>
+
+    <ul>
+        {% for title, description in items.items %}
+            <li>
+                {{ title }} - {{ description }}
+                <button type="button">Кнопка {{ forloop.counter }}</button>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <button onclick="window.location.href='/'">На главную страницу</button>
+</body>
+</html>
