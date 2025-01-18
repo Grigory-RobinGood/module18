@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Изменено на "ru" для русского языка -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} {{ block.super }} {% endblock %}
+    <title>{% block pagename %}Название страницы{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% block menu %}
+                <li><a href="/">Главная</a></li>
+                <li><a href="/cart_page">Корзина</a></li> <!-- Исправлено: "Магазин" на "Корзина" -->
+                <li><a href="/games_page">Игры</a></li> <!-- Исправлено: "Корзина" на "Игры" -->
+                {% endblock %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Контент страницы будет здесь -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 Магазин игр</p>
+    </footer>
+</body>
+</html>

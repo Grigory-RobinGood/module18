@@ -1,0 +1,19 @@
+{% extends "menu.html" %}
+
+{% block title %}{{ block.super }} Игры{% endblock %}
+
+{% block pagename %}Каталог игр{% endblock %}
+
+{% block content %}
+    <h2>Наши цены:</h2>
+
+    {% if parts %}
+        <ul>
+            {% for i in parts %}
+                <li>{{ i }} <button onclick="buyGame('{{ i }}')">Купить</button></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>К сожалению, игр в каталоге нет.</p>
+    {% endif %}
+{% endblock %}

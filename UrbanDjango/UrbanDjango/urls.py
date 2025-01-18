@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from task3.views import platform_page, cart_page, games_page
+from task4.views import platform_page, cart_page, games_page
 from task2.views import func_views, ClassViews
 
 
