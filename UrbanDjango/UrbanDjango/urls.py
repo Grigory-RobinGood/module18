@@ -19,7 +19,7 @@ from django.urls import path
 
 from task4.views import platform_page, cart_page, games_page
 from task2.views import func_views, ClassViews
-
+from task5.views import sign_up_by_django, sign_up_by_html
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +27,7 @@ urlpatterns = [
     path('cart_page/', cart_page),
     path('games_page/', games_page),
     path('func_template/', func_views),
-    path('class_template/', ClassViews.as_view())
+    path('class_template/', ClassViews.as_view()),
+    path('django_sign_up/', sign_up_by_django, name='sign_up_django'),
+    path('html_sign_up/', sign_up_by_html, name='sign_up_html'),
 ]
